@@ -1,0 +1,43 @@
+.dropdown-block {
+  @extend %convex-lower-shadow;
+  min-width: 170%;
+  z-index: 10;
+  position: absolute;
+  top: 80%;
+  right: 0;
+  text-align: left;
+  background: $pure-white;
+  border-radius: .12em;
+  font-size: .9rem;
+  cursor: pointer;
+
+  &__element {
+    display: list-item;
+    padding: 1em .5em 1em 1em;
+
+    &:hover {
+      background-color: lightgray;
+      transition: .6s;
+    }
+  }
+
+  @media screen and (max-width: $mobile-max) {
+    position: inherit;
+    min-width: auto;
+    width: 100%;
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 8px 5px -5px rgba(0, 0, 0, 0.16),
+                0 11px 10px -10px rgba(0, 0, 0, 0.12);
+
+    &__element {
+      padding-left: 1.7em;
+
+      &:hover {
+        background: $pure-white;
+        transition: .2s;
+      }
+    }
+  }
+}

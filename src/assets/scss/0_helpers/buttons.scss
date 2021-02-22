@@ -1,0 +1,70 @@
+.btn {
+  @extend %convex-lower-shadow;
+
+  padding: .3em .8em;
+  cursor: pointer;
+  border: 1px solid rgba(0,0,0,.1);
+  background-color: $pure-white;
+  border-radius: .1em;
+  line-height: 1.5;
+
+  &--uppercase { text-transform: uppercase; }
+
+  //** Buttons with background
+  &--primed {
+    color: #fff;
+
+    $primed-btn: (
+        btn--primary: $primary-button,
+        btn--important: $light-red,
+        btn--lower-blocks: $lower-blocks-background,
+        btn--deep-yellow: $yellow
+    );
+
+    @each $type, $color in $primed-btn {
+      &.#{$type} {
+        background-color: $color;
+        border-color: $color;
+
+        @if $type != 'btn--inactive' {
+          &:hover,
+          &:focus {
+            background-color: saturate($color, $percent-saturation);
+            border-color: saturate($color, $percent-saturation);
+            transition: all .5s;
+          }
+        } @else {
+          &:hover,
+          &:focus {
+            background-color: $color;
+            border-color: $color;
+          }
+        }
+      }
+    }
+  }
+
+  $sized-btn: (
+    btn--mid: .7em 1.3em,
+    btn--big: 1em 1.6em
+  );
+
+  @each $type, $size in $sized-btn {
+    &.#{$type} {
+      padding: $size;
+    }
+  }
+
+  &--round {
+    border-radius: 50%;
+
+    &-big {
+      width: 60*$rem;
+      height: 60*$rem;
+    }
+  }
+
+  &--shadow-hover {
+    @extend %shadow-hover
+  }
+}

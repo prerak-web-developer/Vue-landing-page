@@ -1,0 +1,49 @@
+.details {
+  padding: 100*$rem 20*$rem 90*$rem 20*$rem;
+
+  header {
+    text-align: center;
+    margin-bottom: 60*$rem;
+
+    h2 {
+      margin: 0 0 20*$rem 0;
+      font-weight: normal;
+      letter-spacing: -2*$rem;
+      color: $support-block-background;
+    }
+
+    p {
+      font-size: 14*$rem;
+    }
+  }
+
+  &__block-line {
+    display: flex;
+    flex-wrap: wrap;
+
+    .details-info-block {
+      flex-basis: calc(100% / 3);
+      padding-left: 10*$rem;
+      padding-right: 10*$rem;
+
+      @media(max-width: $tablet-max) {
+        flex-basis: calc(100% / 2);
+      }
+
+      @media(max-width: $mobile-md) {
+        flex-basis: 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      &__icon {
+        flex-basis: 120*$rem;
+      }
+
+      &__button-line {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

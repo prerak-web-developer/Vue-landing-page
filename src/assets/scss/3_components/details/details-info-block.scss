@@ -1,0 +1,43 @@
+.details-info-block {
+  display: flex;
+  margin-bottom: 60*$rem;
+
+  &__icon {
+    flex-basis: 33*$rem;
+    fill: $support-block-background;
+  }
+
+  &__text {
+    padding-left: 20*$rem;
+    padding-right: 15*$rem;
+
+    h5  {
+      margin: 10*$rem 0 15*$rem 0;
+    }
+
+    p {
+      font-size: 14*$rem;
+      line-height: 1.5;
+    }
+  }
+
+  &__button-line {
+    display: flex;
+    align-items: center;
+
+    span {
+      width: 16*$rem;
+      margin-right: 10px;
+
+      svg {
+        fill: $support-block-background;
+      }
+    }
+
+    a {
+      color: $grey;
+      font-weight: 300;
+      font-size: 14*$rem;
+    }
+  }
+}

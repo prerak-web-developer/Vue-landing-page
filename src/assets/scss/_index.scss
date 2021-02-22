@@ -1,0 +1,28 @@
+@import "0_helpers/normalize.scss";
+@import "0_helpers/variables.scss";
+@import "0_helpers/extends.scss";
+@import "0_helpers/mixins.scss";
+@import "0_helpers/buttons.scss";
+
+@import "1_layout/layout.scss";
+
+@import "2_blocks/header-block.scss";
+@import "2_blocks/slider-block.scss";
+@import "2_blocks/features-block.scss";
+@import "2_blocks/about-block.scss";
+@import "2_blocks/user-words-block.scss";
+@import "2_blocks/support-block.scss";
+@import "2_blocks/details-block.scss";
+@import "2_blocks/showcase-block.scss";
+
+@import "3_components/header/logo.scss";
+@import "3_components/header/navigation.scss";
+@import "3_components/header/dropdown-block.scss";
+@import "3_components/slider/slider.scss";
+@import "3_components/slider/indicators.scss";
+@import "3_components/features/info-block.scss";
+@import "3_components/user-words/parallax.scss";
+@import "3_components/user-words/recall.scss";
+@import "3_components/support-block/switcher.scss";
+@import "3_components/details/details-info-block.scss";
+@import "3_components/showcase/presentation-header.scss";

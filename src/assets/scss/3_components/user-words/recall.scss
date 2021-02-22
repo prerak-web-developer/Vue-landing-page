@@ -1,0 +1,67 @@
+.recall {
+  @extend %convex-lower-shadow;
+  @extend %shadow-hover;
+
+  display: flex;
+  justify-content: center;
+  padding: 40*$rem 20*$rem 20*$rem 20*$rem;
+  line-height: 1.5;
+  //width: 630px;
+  //height: 300px;
+  background-color: $pure-white;
+
+  @media(max-width: $mobile-upper-md) {
+    flex-flow: column;
+    align-items: center;
+  }
+
+  &__media {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 35%;
+    margin-right: 5%;
+
+    p {
+      color: $light-black;
+      font-style: italic;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  &__avatar {
+    background-image: url('/src/assets/media/images/parallax/poly-bg03.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 180px;
+    height: 180px;
+    border-radius: 48%;
+    border: 2px solid $strange-gray;
+  }
+
+  &__text {
+    width: 65%;
+    display: flex;
+    flex-flow: column;
+    align-items: start;
+
+    @media(max-width: $mobile-upper-md) {
+      align-items: center;
+      width: auto;
+      text-align: center;
+    }
+
+    h3 {
+      color: $red;
+      font-weight: normal;
+      margin: 0;
+      margin-bottom: 10*$rem;
+    }
+
+    p {
+      color: $pure-black;
+      text-align: left;
+    }
+  }
+}

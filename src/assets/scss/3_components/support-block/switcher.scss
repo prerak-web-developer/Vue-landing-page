@@ -1,0 +1,64 @@
+$lever-width: 40*$rem;
+$lever-after-width: 21*$rem;
+$base-left-indent: 5*$rem;
+
+.switcher {
+
+  &__title {
+    color: $pure-white;
+    font-weight: normal;
+
+    h5 {
+      margin-bottom: 10*$rem;
+    }
+  }
+
+  &__main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 26px;
+    background-color: $light-grey;
+    border-radius: 13*$rem;
+  }
+
+  &__lever {
+    position: relative;
+    cursor: pointer;
+    width: 40*$rem;
+    height: 15*$rem;
+    border-radius: 13*$rem;
+    background-color: $lever-default;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: -$base-left-indent;
+      top: -3px;
+      width: $lever-after-width;
+      height: 21*$rem;
+      border-radius: 50%;
+      transition: left 0.3s ease, background .3s ease, box-shadow 0.1s ease;
+      background-color: $lever-circle;
+      box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4);
+    }
+
+    &--active {
+      background-color: $lever-active;
+
+      &:after {
+        background-color: $lever-active;
+        left: calc(#{$lever-width} - (#{$lever-after-width} - #{$base-left-indent}));
+      }
+    }
+  }
+
+  &__description {
+
+    p {
+      color: $strange-gray;
+      line-height: 1.5;
+    }
+  }
+}

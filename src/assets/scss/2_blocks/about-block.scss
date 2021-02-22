@@ -1,0 +1,48 @@
+.about {
+  padding: 80*$rem 15*$rem;
+
+  &__row {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+
+    &:first-child { margin-bottom: 80*$rem; }
+
+    &--centered { justify-content: center; }
+
+    @media(max-width: $mobile-max) { flex-wrap: wrap; }
+
+    .info-block {
+      flex-basis: 32%;
+      align-items: center;
+      text-align: center;
+      color: $light-black;
+      padding: 0;
+
+      @media(max-width: $mobile-max) {
+        flex-basis: 100%;
+        margin-bottom: 40px;
+
+        &:last-child { margin-bottom: 0; }
+      }
+
+      &__icon {
+        width: 54*$rem;
+        height: 54*$rem;
+        margin: 20*$rem 0;
+
+        svg {
+          max-width: 100%;
+          fill: $red;
+        }
+      }
+
+      &__title {
+
+        h5 { color: $light-black; }
+      }
+    }
+
+    button.btn { text-transform: uppercase; }
+  }
+}

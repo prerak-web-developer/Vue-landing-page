@@ -1,0 +1,23 @@
+.indicators {
+  text-align: center;
+
+  &__element {
+    display: inline-block;
+    position: relative;
+    margin: 0 12px;
+    height: 16*$rem;
+    width: 16*$rem;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: $pure-white;
+
+    @media (max-width: $mobile-upper-max) {
+      height: 19*$rem;
+      width: 19*$rem;
+    }
+    
+    &--active {
+      background-color: $red;
+    }
+  }
+}

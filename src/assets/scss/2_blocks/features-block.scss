@@ -1,0 +1,20 @@
+.features {
+
+  &__row {
+    display: flex;
+    flex-flow: row;
+
+    .info-block {
+      @media(max-width: $desktop-xs) {
+        padding: 40px;
+        flex-basis: 50%;
+      }
+
+      @media(max-width: $mobile-max) { flex-basis: 100%; }
+    }
+
+    @media(max-width: $desktop-xs) {
+      flex-wrap: wrap;
+    }
+  }
+}
